@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="birthday" class="java.util.Date">
+        <constructor-arg name="year" value="2020"/>
+        <constructor-arg name="month" value="02"/>
+        <constructor-arg name="date" value="02"/>
+    </bean>
+
+    <!-- 构造方法注入 -->
+    <bean id="accountService1" class="com.itheima.service.impl.AccountServiceImpl">
+        <constructor-arg index="0" value="Tom"/>
+        <constructor-arg type="java.lang.Integer" value="18"/>
+        <constructor-arg name="birthday" ref="birthday"/>
+    </bean>
+
+    <!-- set 方法注入 -->
+    <bean id="accountService2" class="com.itheima.service.impl.AccountServiceImpl">
+        <property name="name" value="Jack"/>
+        <property name="age" value="20"/>
+        <property name="birthday" ref="birthday"/>
+    </bean>
+
+    <!-- 复杂类型注入 -->
+    <bean id="collectionBean" class="com.itheima.pojo.CollectionBean">
+        <!-- 数组类型注入 -->
+        <property name="myArr">
+            <array>
+                <value>AAA</value>
+                <value>BBB</value>
+                <value>CCC</value>
+            </array>
+        </property>
+        <!-- List 类型注入 -->
+        <property name="myList">
+            <list>
+                <value>DDD</value>
+                <value>EEE</value>
+                <value>FFF</value>
+            </list>
+        </property>
+        <!-- Set 类型注入 -->
+        <property name="mySet">
+            <list>
+                <value>GGG</value>
+                <value>HHH</value>
+                <value>III</value>
+            </list>
+        </property>
+        <!-- Map 类型注入 -->
+        <property name="myMap">
+            <map>
+                <entry key="username" value="tom"/>
+                <entry key="password" value="123456"/>
+                <entry key="email" value="tom@qq.com"/>
+            </map>
+        </property>
+        <!-- Properties 类型注入 -->
+        <property name="myProps">
+            <props>
+                <prop key="username">jack</prop>
+                <prop key="password">654321</prop>
+                <prop key="email">jack@qq.com</prop>
+            </props>
+        </property>
+    </bean>
+
+</beans>

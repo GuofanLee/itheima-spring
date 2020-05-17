@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- 创建对象的方式一：使用默认(无参)构造方法创建对象 -->
+    <bean id="accountService1" class="com.itheima.service.impl.AccountServiceImpl"/>
+
+    <!-- 创建对象的方式二：使用普通工厂中的方法创建对象 -->
+    <!-- 先配置工厂 Bean -->
+<!--    <bean id="instanceFactory" class="com.itheima.factory.InstanceFactory"/>-->
+    <!-- 再通过工厂中的方法获取要创建的对象，需要指明工厂 Bean 的 id 和工厂中创建对象的方法 -->
+<!--    <bean id="accountService2" factory-bean="instanceFactory" factory-method="getAccountService"/>-->
+
+    <!-- 创建对象的方式二：使用工厂中的静态方法创建对象 -->
+<!--    <bean id="accountService3" class="com.itheima.factory.StaticFactory" factory-method="getAccountService"/>-->
+
+    <!-- Bean 的作用范围：singleton(默认：单例) -->
+<!--    <bean id="accountService4" class="com.itheima.service.impl.AccountServiceImpl" scope="singleton"/>-->
+
+    <!-- Bean 的作用范围：prototype(多例) -->
+<!--    <bean id="accountService5" class="com.itheima.service.impl.AccountServiceImpl" scope="prototype"/>-->
+
+    <!-- 单例对象的生命周期 -->
+<!--    <bean id="accountService6" class="com.itheima.service.impl.AccountServiceImpl" scope="singleton" init-method="init" destroy-method="destroy"/>-->
+
+    <!-- 多例对象的生命周期 -->
+<!--    <bean id="accountService7" class="com.itheima.service.impl.AccountServiceImpl" scope="prototype" init-method="init" destroy-method="destroy"/>-->
+
+</beans>
