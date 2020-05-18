@@ -1,0 +1,59 @@
+package com.itheima.service;
+
+import com.itheima.config.SpringConfiguration;
+import com.itheima.pojo.Account;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+
+import java.util.List;
+
+/**
+ * 请填写类的描述
+ *
+ * @author GuofanLee
+ * @date 2020-05-18 21:28
+ */
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(classes = SpringConfiguration.class)
+public class AccountServiceTest {
+
+    @Autowired
+    private AccountService accountService;
+
+    @Test
+    public void getAll() {
+        List<Account> accounts = accountService.getAll();
+        accounts.forEach(System.out::println);
+    }
+
+    @Test
+    public void getById() {
+        Account account = accountService.getById(1);
+        System.out.println(account);
+    }
+
+    @Test
+    public void add() {
+        accountService.add(new Account(null, "test", 1000f));
+        List<Account> accounts = accountService.getAll();
+        accounts.forEach(System.out::println);
+    }
+
+    @Test
+    public void update() {
+        accountService.update(new Account(6, "eee", 2000f));
+        List<Account> accounts = accountService.getAll();
+        accounts.forEach(System.out::println);
+    }
+
+    @Test
+    public void delete() {
+        accountService.delete(6);
+        List<Account> accounts = accountService.getAll();
+        accounts.forEach(System.out::println);
+    }
+
+}
