@@ -19,3 +19,7 @@
 * 账户案例的升级：使用事务实现转账操作
 ## 09-account-transaction-proxy
 * 账户案例的升级：使用动态代理管理事务
+## 10-aop-xml
+* Spring 中基于 xml 的 AOP 配置
+## 11-aop-advice
+* Spring AOP 中的 5 种通知类型

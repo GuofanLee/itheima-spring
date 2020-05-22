@@ -19,14 +19,16 @@
         <module>07-account-annotation</module>
         <module>08-account-transaction</module>
         <module>09-account-transaction-proxy</module>
+        <module>10-aop-xml</module>
     </modules>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
-        <junit.version>4.12</junit.version>
         <spring.version>5.2.2.RELEASE</spring.version>
+        <aspectj.version>1.9.5</aspectj.version>
+        <junit.version>4.12</junit.version>
         <mysql.version>5.1.47</mysql.version>
         <druid.version>1.1.10</druid.version>
         <commons-dbutils.version>1.5</commons-dbutils.version>
@@ -56,6 +58,12 @@
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-context</artifactId>
                 <version>${spring.version}</version>
+            </dependency>
+            <!-- AspectJ-Weaver -->
+            <dependency>
+                <groupId>org.aspectj</groupId>
+                <artifactId>aspectjweaver</artifactId>
+                <version>${aspectj.version}</version>
             </dependency>
             <!-- MySQL 数据库驱动 -->
             <dependency>
