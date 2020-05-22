@@ -10,7 +10,7 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>06-account-ioc</artifactId>
+    <artifactId>06-account-xml</artifactId>
     <packaging>jar</packaging>
 
     <dependencies>

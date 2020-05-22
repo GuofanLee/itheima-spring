@@ -14,6 +14,7 @@
     <!-- QueryRunner -->
     <bean id="queryRunner" class="org.apache.commons.dbutils.QueryRunner" scope="prototype">
         <!-- 为 QueryRunner 注入数据源 -->
+        <!-- 如果要使用事务，不要使用这种方式 -->
         <constructor-arg name="ds" ref="dataSource"/>
     </bean>
 

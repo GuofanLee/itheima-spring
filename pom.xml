@@ -15,9 +15,10 @@
         <module>03-bean</module>
         <module>04-di</module>
         <module>05-annotation-ioc</module>
-        <module>06-account-ioc</module>
+        <module>06-account-xml</module>
         <module>07-account-annotation</module>
         <module>08-account-transaction</module>
+        <module>09-account-transaction-proxy</module>
     </modules>
 
     <properties>

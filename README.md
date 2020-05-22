@@ -11,9 +11,11 @@
 * Spring 依赖注入
 ## 05-annotation-ioc
 * Spring IOC 相关注解
-## 06-account-ioc
-* 使用 Spring IOC 实现一个账户案例
+## 06-account-xml
+* 使用 Spring xml 配置文件方式实现一个账户案例
 ## 07-account-annotation
-* 账户案例的升级：使用 Spring 新注解取代 xml 配置文件
-## 08-account-ioc-1
+* 账户案例的升级：使用 Spring 注解取代 xml 配置文件
+## 08-account-transaction
 * 账户案例的升级：使用事务实现转账操作
+## 09-account-transaction-proxy
+* 账户案例的升级：使用动态代理管理事务

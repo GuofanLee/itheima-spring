@@ -20,6 +20,7 @@ public class JdbcConfig {
     @Bean
     @Scope("prototype")
     public QueryRunner queryRunner(DataSource dataSource) {
+        //如果要使用事务，不要使用这种方式
         return new QueryRunner(dataSource);
     }
 
