@@ -17,6 +17,7 @@
         <module>05-annotation-ioc</module>
         <module>06-account-ioc</module>
         <module>07-account-annotation</module>
+        <module>08-account-transaction</module>
     </modules>
 
     <properties>

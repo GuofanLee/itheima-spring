@@ -15,3 +15,5 @@
 * 使用 Spring IOC 实现一个账户案例
 ## 07-account-annotation
 * 账户案例的升级：使用 Spring 新注解取代 xml 配置文件
+## 08-account-ioc-1
+* 账户案例的升级：使用事务实现转账操作
