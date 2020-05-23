@@ -54,17 +54,12 @@ public class TransactionManager {
      */
     public void release() {
         try {
-            connectionUtils.getConnection().setAutoCommit(true);
+            //释放连接后，会自动恢复自动提交
+            connectionUtils.getConnection().close();
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
-            try {
-                connectionUtils.getConnection().close();
-            } catch (Exception e) {
-                e.printStackTrace();
-            } finally {
-                connectionUtils.removeConnection();
-            }
+            connectionUtils.removeConnection();
         }
     }
 
