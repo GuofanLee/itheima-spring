@@ -23,6 +23,7 @@
         <module>11-aop-advice</module>
         <module>12-aop-annotation</module>
         <module>13-jdbc-template</module>
+        <module>14-account-transaction-aop</module>
     </modules>
 
     <properties>

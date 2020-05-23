@@ -27,3 +27,5 @@
 * Spring 中基于注解的 AOP 配置
 ## 13-jdbc-template
 * JdbcTemplate 的使用
+## 14-account-transaction-aop
+* 账户案例的升级：使用注解 AOP 管理事务
