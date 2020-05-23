@@ -23,3 +23,5 @@
 * Spring 中基于 xml 的 AOP 配置
 ## 11-aop-advice
 * Spring AOP 中的 5 种通知类型
+## 12-aop-annotation
+* Spring 中基于注解的 AOP 配置

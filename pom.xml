@@ -21,6 +21,7 @@
         <module>09-account-transaction-proxy</module>
         <module>10-aop-xml</module>
         <module>11-aop-advice</module>
+        <module>12-aop-annotation</module>
     </modules>
 
     <properties>
