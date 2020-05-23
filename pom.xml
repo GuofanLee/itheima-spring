@@ -20,6 +20,7 @@
         <module>08-account-transaction</module>
         <module>09-account-transaction-proxy</module>
         <module>10-aop-xml</module>
+        <module>11-aop-advice</module>
     </modules>
 
     <properties>
