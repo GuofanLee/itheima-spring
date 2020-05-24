@@ -25,6 +25,7 @@
         <module>13-jdbc-template</module>
         <module>14-account-transaction-aop</module>
         <module>15-spring-tx-xml</module>
+        <module>16-spring-tx-annotation</module>
     </modules>
 
     <properties>

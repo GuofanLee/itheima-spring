@@ -14,27 +14,8 @@
         <property name="dataSource" ref="dataSource"/>
     </bean>
 
-    <!-- 配置事务通知 -->
-    <tx:advice id="txAdvice" transaction-manager="transactionManager">
-        <!-- 配置事务属性 -->
-        <tx:attributes>
-            <!-- 给 transfer（转账）方法添加事务控制，事务属性一般使用默认配置就能满足需求，无需配置 -->
-            <tx:method name="transfer"/>
-            <!-- 不建议使用下面两种配置方式，哪个方法需要事务就给哪个方法配置就可以 -->
-            <!-- 给以 get 开头的方法（通常为查询操作）的配置 -->
-            <!--<tx:method name="get*" propagation="SUPPORTS" read-only="true"/>-->
-            <!-- 给除了以 get 开头的方法（增、删、改，以及其它复杂业务，如转账）的配置 -->
-            <!--<tx:method name="*" propagation="REQUIRED" read-only="false"/>-->
-        </tx:attributes>
-    </tx:advice>
-
-    <!-- 配置切入点表达式和通知 -->
-    <aop:config>
-        <!-- 配置切入点表达式 -->
-        <aop:pointcut id="txPointcut" expression="execution(* com.itheima.service.impl.*.*(..))"/>
-        <!-- 建立事务通知和切入点表达式的对应关系 -->
-        <aop:advisor advice-ref="txAdvice" pointcut-ref="txPointcut"/>
-    </aop:config>
+    <!-- 开启 Spring 对注解事务的支持 -->
+    <tx:annotation-driven transaction-manager="transactionManager"/>
 
     <!-- Druid 数据源 配置 -->
     <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource" init-method="init" destroy-method="close">
