@@ -24,6 +24,7 @@
         <module>12-aop-annotation</module>
         <module>13-jdbc-template</module>
         <module>14-account-transaction-aop</module>
+        <module>15-spring-tx-xml</module>
     </modules>
 
     <properties>
@@ -73,6 +74,12 @@
             <dependency>
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-jdbc</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <!-- spring-tx -->
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-tx</artifactId>
                 <version>${spring.version}</version>
             </dependency>
             <!-- MySQL 数据库驱动 -->

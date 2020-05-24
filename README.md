@@ -29,3 +29,5 @@
 * JdbcTemplate 的使用
 ## 14-account-transaction-aop
 * 账户案例的升级：使用注解 AOP 管理事务
+## 15-spring-tx-xml
+* Spring 中基于 xml 的事务配置
