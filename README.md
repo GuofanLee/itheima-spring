@@ -35,3 +35,5 @@
 * Spring 中基于注解的事务配置
 ## 17-spring-tx-full-annotation
 * Spring 中基于纯注解的事务配置
+## 18-spring-tx-program
+* Spring 编程式事务控制（几乎不用，了解）
