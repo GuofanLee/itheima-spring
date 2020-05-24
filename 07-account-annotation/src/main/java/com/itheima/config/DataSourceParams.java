@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
  * @date 2020-05-19 00:27
  */
 @Component
-public class JdbcInfo {
+public class DataSourceParams {
 
     @Value("${jdbc.driverClassName}")
     private String driverClassName;

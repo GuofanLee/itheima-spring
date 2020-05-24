@@ -4,14 +4,16 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 import org.springframework.context.annotation.PropertySource;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 /**
- * 请填写类的描述
+ * Spring 主配置类
  *
  * @author GuofanLee
- * @date 2020-05-18 23:19
+ * @date 2020-05-25 02:10
  */
 @Configuration
+@EnableTransactionManagement
 @ComponentScan("com.itheima")
 @Import(DataSourceConfig.class)
 @PropertySource("classpath:jdbc.properties")

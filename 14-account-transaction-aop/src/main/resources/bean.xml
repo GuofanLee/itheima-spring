@@ -6,11 +6,11 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
        http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/aop https://www.springframework.org/schema/aop/spring-aop.xsd">
 
-    <!-- 注解包扫描路径 -->
+    <!-- 配置注解包扫描 -->
     <context:component-scan base-package="com.itheima"/>
 
     <!-- 加载 properties 属性文件 -->
-    <context:property-placeholder location="classpath*:*.properties"/>
+    <context:property-placeholder location="classpath:jdbc.properties"/>
 
     <!-- 开启 AOP 注解配置 -->
     <aop:aspectj-autoproxy/>

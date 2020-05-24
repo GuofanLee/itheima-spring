@@ -7,9 +7,9 @@
 
     <context:component-scan base-package="com.itheima"/>
 
-    <context:property-placeholder location="jdbc.properties"/>
+    <context:property-placeholder location="classpath:jdbc.properties"/>
 
-    <!-- 配置事务管理器 -->
+    <!-- 配置 Spring 事务管理器 -->
     <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
         <property name="dataSource" ref="dataSource"/>
     </bean>
@@ -31,8 +31,9 @@
         <property name="maxActive" value="${jdbc.maxActive}"/>
     </bean>
 
-    <!-- 配置 JdbcTemplate，为 JdbcTemplate 注入数据源 -->
+    <!-- 配置 JdbcTemplate -->
     <bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+        <!-- 为 JdbcTemplate 注入数据源 -->
         <property name="dataSource" ref="dataSource"/>
     </bean>
 

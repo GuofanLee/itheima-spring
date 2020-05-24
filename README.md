@@ -31,3 +31,7 @@
 * 账户案例的升级：使用注解 AOP 管理事务
 ## 15-spring-tx-xml
 * Spring 中基于 xml 的事务配置
+## 16-spring-tx-annotation
+* Spring 中基于注解的事务配置
+## 17-spring-tx-full-annotation
+* Spring 中基于纯注解的事务配置

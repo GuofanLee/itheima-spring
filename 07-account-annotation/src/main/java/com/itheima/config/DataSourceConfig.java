@@ -15,7 +15,7 @@ import javax.sql.DataSource;
  * @date 2020-05-19 02:48
  */
 @Configuration
-public class JdbcConfig {
+public class DataSourceConfig {
 
     @Bean
     @Scope("prototype")
@@ -25,15 +25,15 @@ public class JdbcConfig {
     }
 
     @Bean
-    public DataSource dataSource(JdbcInfo jdbcInfo) {
+    public DataSource dataSource(DataSourceParams dataSourceParams) {
         DruidDataSource dataSource = new DruidDataSource();
-        dataSource.setDriverClassName(jdbcInfo.getDriverClassName());
-        dataSource.setUrl(jdbcInfo.getUrl());
-        dataSource.setUsername(jdbcInfo.getUsername());
-        dataSource.setPassword(jdbcInfo.getPassword());
-        dataSource.setInitialSize(jdbcInfo.getInitialSize());
-        dataSource.setMinIdle(jdbcInfo.getMinIdle());
-        dataSource.setMaxActive(jdbcInfo.getMaxActive());
+        dataSource.setDriverClassName(dataSourceParams.getDriverClassName());
+        dataSource.setUrl(dataSourceParams.getUrl());
+        dataSource.setUsername(dataSourceParams.getUsername());
+        dataSource.setPassword(dataSourceParams.getPassword());
+        dataSource.setInitialSize(dataSourceParams.getInitialSize());
+        dataSource.setMinIdle(dataSourceParams.getMinIdle());
+        dataSource.setMaxActive(dataSourceParams.getMaxActive());
         return dataSource;
     }
 
